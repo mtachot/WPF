@@ -41,9 +41,11 @@ namespace WpfApplication1
         void MainWindow_Closed(object sender, EventArgs e)
         {
             // Killing remaining events (prevents memory leaks)
-            btnOK.Click -= btnOK_Click;
-            btnCancel.Click -= btnCancel_Click;
+            btnHeaderedControls.Click -= btnHeaderedControls_Click;
+            btnClose.Click -= btnClose_Click;
             btnAbonnement.Click -= btnAbonnement_Click;
+            btnPanel.Click -= btnPanel_Click;
+            btnUserControl.Click -= btnUserControl_Click;
         }
 
         #endregion
@@ -57,24 +59,32 @@ namespace WpfApplication1
             Closed += MainWindow_Closed;
 
             // Components
-            btnOK.Click += btnOK_Click;
-            btnCancel.Click += btnCancel_Click;
+            btnHeaderedControls.Click += btnHeaderedControls_Click;
+            btnClose.Click += btnClose_Click;
             btnAbonnement.Click += btnAbonnement_Click;
+            btnPanel.Click += btnPanel_Click;
+            btnUserControl.Click += btnUserControl_Click;
         }
 
+        private void btnUserControl_Click(object sender, RoutedEventArgs e)
+        {
+            new TestUserControl_Window().Show();
+        }
         private void btnAbonnement_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Thanks !");
         }
-
-        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-
-        private void btnOK_Click(object sender, RoutedEventArgs e)
+        private void btnHeaderedControls_Click(object sender, RoutedEventArgs e)
         {
             new HeaderControls_Window().Show();
+        }
+        private void btnPanel_Click(object sender, RoutedEventArgs e)
+        {
+            new Panels_Window().Show();
         }
 
         #endregion

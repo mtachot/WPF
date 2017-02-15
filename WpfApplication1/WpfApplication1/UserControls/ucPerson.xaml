@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="WpfApplication1.UserControls.ucPerson"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Content="_Prénom :" Target="{Binding ElementName=txtPrenom, Mode=OneWay}" 
+               Margin="3" VerticalAlignment="Top" Background="Aquamarine"/>
+        <TextBox x:Name="txtPrenom" Grid.Column="1" HorizontalAlignment="Left" Margin="10 3" 
+                 TextWrapping="Wrap" Text="Toto" VerticalAlignment="Top" Background="Aquamarine" Width="100" />
+        <Label Grid.Row="1" Content="_Nom :" Target="{Binding ElementName=txtNom, Mode=OneWay}" 
+               Margin="3" VerticalAlignment="Top" Background="Aquamarine"/>
+        <TextBox x:Name="txtNom" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="10 3" 
+                 TextWrapping="Wrap" Text="TOTO" VerticalAlignment="Top" Background="Aquamarine" Width="100"/>
+        <Label Grid.Row="2" Content="_Age :" Target="{Binding ElementName=txtAge, Mode=OneWay}" 
+               Margin="3" VerticalAlignment="Top" Background="Aquamarine"/>
+        <TextBox x:Name="txtAge" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="10 3" 
+                 TextWrapping="Wrap" Text="99" VerticalAlignment="Top" Background="Aquamarine" Width="100"/>
+        <Expander Grid.Row="3" Grid.ColumnSpan="2" Header="Adresse :">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Content="_Voie :" Target="{Binding ElementName=txtVoie, Mode=OneWay}" 
+                    Margin="3" VerticalAlignment="Top" Background="Aquamarine"/>
+                <TextBox x:Name="txtVoie" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="10 3" 
+                    TextWrapping="Wrap" VerticalAlignment="Top" Background="Aquamarine" Width="100"/>
+                <Label Grid.Row="1" Content="_Ville :" Target="{Binding ElementName=txtVille, Mode=OneWay}" 
+                    Margin="3" VerticalAlignment="Top" Background="Aquamarine"/>
+                <TextBox x:Name="txtVille" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="10 3" 
+                    TextWrapping="Wrap" VerticalAlignment="Top" Background="Aquamarine" Width="100"/>
+                <Label Grid.Row="2" Content="_Code Postal :" Target="{Binding ElementName=txtCodePostal, Mode=OneWay}" 
+                    Margin="3" VerticalAlignment="Top" Background="Aquamarine"/>
+                <TextBox x:Name="txtCodePostal" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="10 3" 
+                    TextWrapping="Wrap" VerticalAlignment="Top" Background="Aquamarine" Width="100"/>
+            </Grid>
+        </Expander>
+    </Grid>
+</UserControl>

@@ -1,0 +1,44 @@
+﻿<Window x:Class="WpfApplication1.Panels_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Panels_Window" Height="900" Width="900">
+    <Grid>
+        <StackPanel x:Name="spGender" Margin="10" Orientation="Vertical">
+            <TextBlock Text="StackPanel : " Margin="10 0 10 10" FontWeight="Bold"/>
+            <RadioButton Content="Male" Margin="10 0 10 0"/>
+            <RadioButton Content="Female" Margin="10 0 10 0"/>
+            <TextBlock Text="DockPanel : " Margin="10 10 10 0" FontWeight="Bold"/>
+            <DockPanel Height="200" Width="300" Margin="10" HorizontalAlignment="Left">
+                <Label>
+                    <Label.Content>1 : Top</Label.Content>
+                    <Label.Foreground>White</Label.Foreground>
+                    <Label.Background>Blue</Label.Background>
+                    <DockPanel.Dock>Top</DockPanel.Dock>
+                </Label>
+                <Label>
+                    <Label.Content>2 : Left</Label.Content>
+                    <Label.Foreground>White</Label.Foreground>
+                    <Label.Background>Red</Label.Background>
+                    <DockPanel.Dock>Left</DockPanel.Dock>
+                </Label>
+                <Label>
+                    <Label.Content>3 : Right</Label.Content>
+                    <Label.Foreground>Black</Label.Foreground>
+                    <Label.Background>Yellow</Label.Background>
+                    <DockPanel.Dock>Right</DockPanel.Dock>
+                </Label>
+                <Label>
+                    <Label.Content>4 : Bottom</Label.Content>
+                    <Label.Foreground>Black</Label.Foreground>
+                    <Label.Background>Gray</Label.Background>
+                    <DockPanel.Dock>Bottom</DockPanel.Dock>
+                </Label>
+                <Label>
+                    <Label.Content>5 : LastOne = Fill</Label.Content>
+                    <Label.Foreground>Black</Label.Foreground>
+                    <Label.Background>Green</Label.Background>
+                </Label>
+            </DockPanel>
+        </StackPanel>
+    </Grid>
+</Window>
