@@ -11,3 +11,7 @@ c:\users\matthieu.tachot\documents\visual studio 2013\Projects\WpfApplication1\W
 c:\users\matthieu.tachot\documents\visual studio 2013\Projects\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.csproj.GenerateResource.Cache
 c:\users\matthieu.tachot\documents\visual studio 2013\Projects\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.exe
 c:\users\matthieu.tachot\documents\visual studio 2013\Projects\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.pdb
+c:\users\matthieu.tachot\documents\visual studio 2013\Projects\WpfApplication1\WpfApplication1\bin\Debug\Pics\pic_001.png
+c:\users\matthieu.tachot\documents\visual studio 2013\Projects\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1_Content.g.cs
+c:\users\matthieu.tachot\documents\visual studio 2013\Projects\WpfApplication1\WpfApplication1\obj\Debug\HeaderControls_Window.baml
+c:\users\matthieu.tachot\documents\visual studio 2013\Projects\WpfApplication1\WpfApplication1\obj\Debug\HeaderControls_Window.g.cs

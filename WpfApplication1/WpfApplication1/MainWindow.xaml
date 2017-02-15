@@ -13,7 +13,25 @@
                 <System:Double>80</System:Double>
             </Button.Width> OK
         </Button>
-
+        <Button x:Name="btnAbonnement">
+            <Button.Height>40</Button.Height>
+            <Button.Width>80</Button.Width>
+            <StackPanel x:Name="spAbonnement">
+                <StackPanel.Height>40</StackPanel.Height>
+                <StackPanel.Width>80</StackPanel.Width>
+                <Image x:Name="imgAbonnement">
+                    <Image.Source>
+                        <ImageSource>Pics/pic_001.png</ImageSource>
+                    </Image.Source>
+                    <Image.Height>20</Image.Height>
+                    <Image.Width>80</Image.Width>
+                    <Image.VerticalAlignment>Top</Image.VerticalAlignment>
+                </Image>
+                <Label x:Name="lblAbonnement">
+                    <Label.Content>Soutenir</Label.Content>
+                </Label>
+            </StackPanel>
+        </Button>
         <TextBox x:Name="txtPrenom" Margin="10,57,307,303">
             <TextBox.Height>
                 <System:Double>40</System:Double>

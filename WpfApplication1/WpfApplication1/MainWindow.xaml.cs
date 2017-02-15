@@ -22,6 +22,9 @@ namespace WpfApplication1
     {
         public MainWindow()
         {
+            // Permet de fermer toutes les fenêtres lors dela fermeture de la fenêtre principale
+            Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
+
             InitializeComponent();
             DefiningEvents();
         }
@@ -40,11 +43,13 @@ namespace WpfApplication1
             // Killing remaining events (prevents memory leaks)
             btnOK.Click -= btnOK_Click;
             btnCancel.Click -= btnCancel_Click;
+            btnAbonnement.Click -= btnAbonnement_Click;
         }
 
         #endregion
 
         #region Events
+
         private void DefiningEvents()
         {
             // Page
@@ -54,14 +59,22 @@ namespace WpfApplication1
             // Components
             btnOK.Click += btnOK_Click;
             btnCancel.Click += btnCancel_Click;
+            btnAbonnement.Click += btnAbonnement_Click;
+        }
+
+        private void btnAbonnement_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Thanks !");
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
         }
 
         private void btnOK_Click(object sender, RoutedEventArgs e)
         {
+            new HeaderControls_Window().Show();
         }
 
         #endregion
