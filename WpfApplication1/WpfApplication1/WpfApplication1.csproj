@@ -55,12 +55,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DynamicStyle_Window.xaml.cs">
+      <DependentUpon>DynamicStyle_Window.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TestUserControl_Window.xaml.cs">
       <DependentUpon>TestUserControl_Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucPerson.xaml.cs">
       <DependentUpon>ucPerson.xaml</DependentUpon>
     </Compile>
+    <Page Include="DynamicStyle_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="HeaderControls_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -81,6 +88,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Panels_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\MainResourcesDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

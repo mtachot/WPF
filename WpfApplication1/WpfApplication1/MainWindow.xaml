@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:System="clr-namespace:System;assembly=mscorlib" mc:Ignorable="d" x:Class="WpfApplication1.MainWindow"
         Title="MainWindow" Height="350" Width="525">
     <Grid Height="400" Background="Cornsilk">
-        <Button Content="Fermer" Margin="427,287,10,93" Height="20" Width="80" x:Name="btnClose"/>
+        <Button Content="Fermer" Margin="427,287,10,93" Height="20" Width="80" x:Name="btnClose" />
         <Button Margin="342,287,95,93" x:Name="btnHeaderedControls">
             <Button.Content>HeaderedControls</Button.Content>
             <Button.FontSize>9</Button.FontSize>
@@ -51,6 +51,12 @@
             <Button.Height>20</Button.Height>
             <Button.Width>80</Button.Width>
             <Button.Content>UserControls</Button.Content>
+        </Button>
+        <Button x:Name="btnDynamicResources" Margin="87,286,350,94">
+            <Button.Height>20</Button.Height>
+            <Button.Width>80</Button.Width>
+            <Button.Content>DynamicResources</Button.Content>
+            <Button.FontSize>9</Button.FontSize>
         </Button>
     </Grid>
 </Window>

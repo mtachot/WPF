@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-c:\users\matthieu.tachot\documents\visual studio 2013\Projects\WpfApplication1\WpfApplication1\obj\Debug\
+C:\Users\Jool_\Source\Repos\WPF\WPF\WpfApplication1\WpfApplication1\obj\Debug\
 WpfApplication1
 none
 false
 DEBUG;TRACE
-c:\users\matthieu.tachot\documents\visual studio 2013\Projects\WpfApplication1\WpfApplication1\App.xaml
-5-1927258815
+C:\Users\Jool_\Source\Repos\WPF\WPF\WpfApplication1\WpfApplication1\App.xaml
+7734474450
 11730592181
-91190368028
+10170746183
 141012385901
-HeaderControls_Window.xaml;MainWindow.xaml;Panels_Window.xaml;TestUserControl_Window.xaml;UserControls\ucPerson.xaml;
+DynamicStyle_Window.xaml;HeaderControls_Window.xaml;MainWindow.xaml;Panels_Window.xaml;Resources\MainResourcesDictionary.xaml;TestUserControl_Window.xaml;UserControls\ucPerson.xaml;
 
 False
 

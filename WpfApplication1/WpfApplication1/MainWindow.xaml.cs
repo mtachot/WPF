@@ -24,7 +24,7 @@ namespace WpfApplication1
         {
             // Permet de fermer toutes les fenêtres lors dela fermeture de la fenêtre principale
             Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
-
+            
             InitializeComponent();
             DefiningEvents();
         }
@@ -35,6 +35,10 @@ namespace WpfApplication1
         void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             this.txtPrenom.Text = "Toto";
+
+            // Style
+            SolidColorBrush s = Application.Current.Resources["buttonOrange"] as SolidColorBrush;
+            btnClose.Background = s;
         }
 
         // Evénement appelé lorsque la fenêtre se ferme (juste avant la fermeture)
@@ -46,6 +50,7 @@ namespace WpfApplication1
             btnAbonnement.Click -= btnAbonnement_Click;
             btnPanel.Click -= btnPanel_Click;
             btnUserControl.Click -= btnUserControl_Click;
+            btnDynamicResources.Click -= btnDynamicResources_Click;
         }
 
         #endregion
@@ -64,8 +69,13 @@ namespace WpfApplication1
             btnAbonnement.Click += btnAbonnement_Click;
             btnPanel.Click += btnPanel_Click;
             btnUserControl.Click += btnUserControl_Click;
+            btnDynamicResources.Click += btnDynamicResources_Click;
         }
 
+        private void btnDynamicResources_Click(object sender, RoutedEventArgs e)
+        {
+            new DynamicStyle_Window().Show();
+        }
         private void btnUserControl_Click(object sender, RoutedEventArgs e)
         {
             new TestUserControl_Window().Show();
@@ -88,6 +98,6 @@ namespace WpfApplication1
         }
 
         #endregion
-        
-    }
+
+        }
 }

@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfApplication1.Resources">
+    
+    <SolidColorBrush x:Key="textboxOrange" Color="#FFFF9A08"/>
+    <SolidColorBrush x:Key="buttonOrange" Color="#FFFF8000"/>
+    <SolidColorBrush x:Key="backgroundRed" Color="#FFFD0404"/>
+    <SolidColorBrush x:Key="backgroundGreen" Color="#FF2FD100"/>
+    <SolidColorBrush x:Key="backGroundPink" Color="#FFFF5AAD"/>
+    <SolidColorBrush x:Key="backgroundWhite" Color="#FFFBFBFB"/>
+
+</ResourceDictionary>
