@@ -51,6 +51,7 @@ namespace WpfApplication1
             btnPanel.Click -= btnPanel_Click;
             btnUserControl.Click -= btnUserControl_Click;
             btnDynamicResources.Click -= btnDynamicResources_Click;
+            btnTemplate.Click -= btnTemplate_Click;
         }
 
         #endregion
@@ -70,6 +71,12 @@ namespace WpfApplication1
             btnPanel.Click += btnPanel_Click;
             btnUserControl.Click += btnUserControl_Click;
             btnDynamicResources.Click += btnDynamicResources_Click;
+            btnTemplate.Click += btnTemplate_Click;
+        }
+
+        private void btnTemplate_Click(object sender, RoutedEventArgs e)
+        {
+            new Template_Window().Show();
         }
 
         private void btnDynamicResources_Click(object sender, RoutedEventArgs e)

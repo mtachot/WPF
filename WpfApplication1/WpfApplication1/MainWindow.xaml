@@ -2,10 +2,9 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:System="clr-namespace:System;assembly=mscorlib" mc:Ignorable="d" x:Class="WpfApplication1.MainWindow"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid Height="400" Background="Cornsilk">
-        <Button Content="Fermer" Margin="427,287,10,93" Height="20" Width="80" x:Name="btnClose" />
-        <Button Margin="342,287,95,93" x:Name="btnHeaderedControls">
+        Title="MainWindow" Height="700" Width="700">
+    <Grid Background="Cornsilk" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Button Margin="48,419,464,130" x:Name="btnHeaderedControls" Panel.ZIndex="20">
             <Button.Content>HeaderedControls</Button.Content>
             <Button.FontSize>9</Button.FontSize>
             <Button.Height>
@@ -42,21 +41,27 @@
                 <System:Double>200</System:Double>
             </TextBox.Width>
         </TextBox>
-        <Button x:Name="btnPanel" Margin="257,286,180,94">
+        <Button x:Name="btnPanel" Margin="48,394,464,155">
             <Button.Height>20</Button.Height>
             <Button.Width>80</Button.Width>
             <Button.Content>Panels</Button.Content>
         </Button>
-        <Button x:Name="btnUserControl" Margin="172,286,265,94">
+        <Button x:Name="btnUserControl" Margin="48,444,464,105">
             <Button.Height>20</Button.Height>
             <Button.Width>80</Button.Width>
             <Button.Content>UserControls</Button.Content>
         </Button>
-        <Button x:Name="btnDynamicResources" Margin="87,286,350,94">
+        <Button x:Name="btnDynamicResources" Margin="48,369,464,180">
             <Button.Height>20</Button.Height>
             <Button.Width>80</Button.Width>
             <Button.Content>DynamicResources</Button.Content>
             <Button.FontSize>9</Button.FontSize>
         </Button>
+        <Button x:Name="btnTemplate" Margin="48,344,464,205">
+            <Button.Height>20</Button.Height>
+            <Button.Width>80</Button.Width>
+            <Button.Content>Templates</Button.Content>
+        </Button>
+        <Button Content="Fermer" Height="20" Width="80" x:Name="btnClose" MinWidth="80" MinHeight="20" Margin="590,620,10,10" />
     </Grid>
 </Window>

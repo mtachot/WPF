@@ -14,7 +14,7 @@
     <Grid Background="{StaticResource SunsetRadiantBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -35,13 +35,21 @@
                  TextWrapping="Wrap" Text="TOTO" VerticalAlignment="Top" Background="{DynamicResource textboxOrange}" Width="100"/>
         <Label Grid.Row="2" Content="_Age :" Target="{Binding ElementName=txtAge, Mode=OneWay}" 
                Margin="3" VerticalAlignment="Top" Background="Aquamarine"/>
-        <TextBox x:Name="txtAge" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="10 3" 
-                 TextWrapping="Wrap" Text="99" VerticalAlignment="Top" Background="{DynamicResource textboxOrange}" Width="100"/>
+        <Grid x:Name="gridAge" Grid.Column="1" Grid.Row="2">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+        	<TextBox x:Name="txtAge" HorizontalAlignment="Left" Grid.Column="0" Margin="10 3"
+        		TextWrapping="Wrap" VerticalAlignment="Center" Background="{DynamicResource textboxOrange}" Width="100"/>
+        	<Slider Grid.Column="1" x:Name="sliderAge" Height="10" Width="80" HorizontalAlignment="Left" VerticalAlignment="Center" Maximum="150" TickFrequency="1"
+				Value="{Binding Text, ElementName=txtAge}" SmallChange="1" IsSnapToTickEnabled="True" />
+        </Grid>
         <Expander Grid.Row="3" Grid.ColumnSpan="2" Header="Adresse :">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
