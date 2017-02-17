@@ -23,6 +23,33 @@ namespace WpfApplication1.UserControls
         public ucPerson()
         {
             InitializeComponent();
+
+            // Validation
+            Validation.AddErrorHandler(this.txtAge, AgeValidationHandler);
         }
+
+        #region Page Life Cycle
+
+        private void ucPerson_Loaded(object sender, EventArgs e)
+        {
+        }
+
+        #endregion
+
+        #region Events
+
+        #endregion
+
+        #region Validation
+
+        private void AgeValidationHandler(object sender, ValidationErrorEventArgs e)
+        {
+            if (e.Action == ValidationErrorEventAction.Added)
+            {
+                MessageBox.Show(e.Error.ErrorContent.ToString());
+            }
+        }
+
+        #endregion
     }
 }

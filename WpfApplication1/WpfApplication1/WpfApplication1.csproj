@@ -57,6 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="Classes\Converters\AgeToBrushConverter.cs" />
     <Compile Include="Classes\Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Classes\Validaters\NumberRangeRule.cs" />
     <Compile Include="DynamicStyle_Window.xaml.cs">
       <DependentUpon>DynamicStyle_Window.xaml</DependentUpon>
     </Compile>

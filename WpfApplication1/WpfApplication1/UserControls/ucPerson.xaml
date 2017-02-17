@@ -4,6 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:Converters="clr-namespace:WpfApplication1.Classes.Converters" x:Class="WpfApplication1.UserControls.ucPerson" 
+             xmlns:local="clr-namespace:WpfApplication1"
+             xmlns:Validaters="clr-namespace:WpfApplication1.Classes.Validaters"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
@@ -42,10 +44,19 @@
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="*"/>
 			</Grid.ColumnDefinitions>
-			<TextBox x:Name="txtAge" HorizontalAlignment="Left" Grid.Column="0" Margin="10 3"
-				Text="{Binding ElementName=sliderAge, Path=Value}" TextWrapping="Wrap" VerticalAlignment="Center" Background="{DynamicResource textboxOrange}" 
-                Width="100" Foreground="{Binding Text, Converter={StaticResource ageToBrushConverter}, ElementName=txtAge}"/>
-			<Slider Grid.Column="1" x:Name="sliderAge" Height="10" Width="80" HorizontalAlignment="Left" VerticalAlignment="Center" Maximum="150" TickFrequency="1"
+            <TextBox x:Name="txtAge" HorizontalAlignment="Left" Grid.Column="0" Margin="10 3"
+				TextWrapping="Wrap" VerticalAlignment="Center" Background="{DynamicResource textboxOrange}" 
+                Width="100" Foreground="{Binding Text, Converter={StaticResource ageToBrushConverter}, ElementName=txtAge}">
+                <TextBox.Text>
+                    <Binding Path="Value" NotifyOnValidationError="True" UpdateSourceTrigger="PropertyChanged" ElementName="sliderAge">
+                        <Binding.ValidationRules>
+                            <ExceptionValidationRule />
+                            <Validaters:NumberRangeRule Min="0" Max="150" ValidationStep="ConvertedProposedValue" />
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            <Slider Grid.Column="1" x:Name="sliderAge" Height="10" Width="80" HorizontalAlignment="Left" VerticalAlignment="Center" Maximum="150" TickFrequency="1"
 				Value="{Binding Age}" SmallChange="1" IsSnapToTickEnabled="True" Margin="10,10,0,13" />
 		</Grid>
 		<Expander Grid.Row="3" Grid.ColumnSpan="2" Header="Adresse :">
@@ -61,9 +72,24 @@
 				</Grid.RowDefinitions>
 				<Label Grid.Row="0" Content="_Voie :" Target="{Binding ElementName=txtVoie, Mode=OneWay}" 
 					Margin="3" VerticalAlignment="Top" Background="Aquamarine"/>
-				<TextBox x:Name="txtVoie" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="10 3" 
-					TextWrapping="Wrap" VerticalAlignment="Top" Background="{DynamicResource textboxOrange}" Width="100"/>
-				<Label Grid.Row="1" Content="_Ville :" Target="{Binding ElementName=txtVille, Mode=OneWay}" 
+                <TextBox x:Name="txtVoie" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="10 3" 
+					TextWrapping="Wrap" VerticalAlignment="Top" Background="{DynamicResource textboxOrange}" Width="100">
+                    <Binding Path="Voie" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <ExceptionValidationRule />
+                        </Binding.ValidationRules>
+                    </Binding>
+                    <Validation.ErrorTemplate>
+                        <ControlTemplate>
+                            <StackPanel>
+                                <!-- Placeholder for the Textbox itself -->
+                                <AdornedElementPlaceholder x:Name="textBox" />
+                                <TextBlock Text="{Binding [0].ErrorContent}" Foreground="Red" />
+                            </StackPanel>
+                        </ControlTemplate>
+                    </Validation.ErrorTemplate>
+                </TextBox>
+                <Label Grid.Row="1" Content="_Ville :" Target="{Binding ElementName=txtVille, Mode=OneWay}" 
 					Margin="3" VerticalAlignment="Top" Background="Aquamarine"/>
 				<TextBox x:Name="txtVille" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="10 3" 
 					TextWrapping="Wrap" VerticalAlignment="Top" Background="{DynamicResource textboxOrange}" Width="100"/>
