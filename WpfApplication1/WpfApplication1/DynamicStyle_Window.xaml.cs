@@ -34,7 +34,7 @@ namespace WpfApplication1
 
         #endregion
 
-        #region Events        
+        #region Events
 
         private void btnPink_Click(object sender, RoutedEventArgs e)
         {

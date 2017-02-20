@@ -55,8 +55,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\Converters\AgeToBrushConverter.cs" />
+    <Compile Include="Classes\Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Classes\Validaters\NumberRangeRule.cs" />
     <Compile Include="DynamicStyle_Window.xaml.cs">
       <DependentUpon>DynamicStyle_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Template_Window.xaml.cs">
+      <DependentUpon>Template_Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="TestUserControl_Window.xaml.cs">
       <DependentUpon>TestUserControl_Window.xaml</DependentUpon>
@@ -92,6 +98,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\MainResourcesDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Template_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -139,6 +149,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,0 +1,8 @@
+﻿<Window x:Class="WpfApplication1.Template_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Template_Window" Height="300" Width="300">
+    <Grid>
+        <CheckBox x:Name="cbSalon" Margin="10,10,200,222" Style="{StaticResource checkboxTemplate1}">Salon</CheckBox>
+    </Grid>
+</Window>
