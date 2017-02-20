@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\Address.cs" />
     <Compile Include="Classes\Converters\AgeToBrushConverter.cs" />
     <Compile Include="Classes\Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Classes\Personne.cs" />

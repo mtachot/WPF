@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using WpfApplication1.Classes;
 
 namespace WpfApplication1
 {
@@ -19,9 +9,17 @@ namespace WpfApplication1
     /// </summary>
     public partial class DataGrid_Window : Window
     {
+        private List<Personne> personnes = new List<Personne>
+            {
+                new Personne{Nom="Dalton", Prenom="Joe", Age=12},
+                new Personne{Nom="Dalton", Prenom="Jack", Age=14},
+                new Personne{Nom="Dalton", Prenom="William", Age=16},
+                new Personne{Nom="Dalton", Prenom="Averell", Age=18}
+            };
         public DataGrid_Window()
         {
             InitializeComponent();
+            gridPersonne.ItemsSource = personnes;
         }
     }
 }

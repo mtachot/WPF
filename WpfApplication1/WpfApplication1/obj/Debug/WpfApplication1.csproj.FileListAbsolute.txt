@@ -87,3 +87,4 @@ C:\Users\matthieu.tachot\Source\Repos\WPF\WpfApplication1\WpfApplication1\obj\De
 C:\Users\matthieu.tachot\Source\Repos\WPF\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.pdb
 C:\Users\matthieu.tachot\Source\Repos\WPF\WpfApplication1\WpfApplication1\obj\Debug\DataGrid_Window.baml
 C:\Users\matthieu.tachot\Source\Repos\WPF\WpfApplication1\WpfApplication1\obj\Debug\DataGrid_Window.g.cs
+C:\Users\matthieu.tachot\Source\Repos\WPF\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.csprojResolveAssemblyReference.cache

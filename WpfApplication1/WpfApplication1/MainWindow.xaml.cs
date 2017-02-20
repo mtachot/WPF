@@ -53,6 +53,7 @@ namespace WpfApplication1
             btnDynamicResources.Click -= btnDynamicResources_Click;
             btnTemplate.Click -= btnTemplate_Click;
             btnUsableUserControl.Click -= btnUsableUserControl_Click;
+            btnDatagrid.Click -= btnDatagrid_Click;
         }
 
         #endregion
