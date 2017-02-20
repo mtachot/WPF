@@ -1,0 +1,32 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:UserControls="clr-namespace:WpfApplication1.UserControls"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="WpfApplication1.TestUsableUserControl_Window"
+        Title="Client" Height="300" Width="600" ResizeMode="NoResize">
+	<Window.Resources>
+		<DataTemplate x:Key="personneDataTemplate">
+			<Grid d:DesignWidth="120" d:DesignHeight="50">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="45"/>
+				</Grid.ColumnDefinitions>
+				<TextBlock x:Name="textblockNom" HorizontalAlignment="Left" Height="17" Margin="3" TextWrapping="Wrap" FontSize="16" VerticalAlignment="Center">
+					<Run Text="{Binding Prenom}" />
+					<Run Text="{Binding Nom}" FontWeight="SemiBold" />
+				</TextBlock>
+				<Border Grid.Column="1" HorizontalAlignment="Left" Margin="2" BorderBrush="Black" BorderThickness="1" CornerRadius="2">
+					<TextBlock x:Name="textblockAge" TextWrapping="Wrap" Text="{Binding Age}" FontSize="22" Margin="3" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{Binding Age, Converter={StaticResource ageToBrushConverter}}"/>
+				</Border>
+			</Grid>
+		</DataTemplate>
+	</Window.Resources>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="200"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<ListBox x:Name="listboxPersonnes" Grid.Column="0" Margin="10" ItemTemplate="{DynamicResource personneDataTemplate}" HorizontalContentAlignment="Stretch"/>
+		<UserControls:ucUsablePerson Margin="10" Grid.Column="1" DataContext="{Binding ElementName=listboxPersonnes, Path=SelectedItem}"/>
+	</Grid>
+</Window>

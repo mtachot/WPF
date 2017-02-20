@@ -52,6 +52,7 @@ namespace WpfApplication1
             btnUserControl.Click -= btnUserControl_Click;
             btnDynamicResources.Click -= btnDynamicResources_Click;
             btnTemplate.Click -= btnTemplate_Click;
+            btnUsableUserControl.Click -= btnUsableUserControl_Click;
         }
 
         #endregion
@@ -72,13 +73,23 @@ namespace WpfApplication1
             btnUserControl.Click += btnUserControl_Click;
             btnDynamicResources.Click += btnDynamicResources_Click;
             btnTemplate.Click += btnTemplate_Click;
+            btnUsableUserControl.Click += btnUsableUserControl_Click;
+            btnDatagrid.Click += btnDatagrid_Click;
         }
 
+        private void btnDatagrid_Click(object sender, RoutedEventArgs e)
+        {
+            new DataGrid_Window().Show(); 
+        }
+
+        private void btnUsableUserControl_Click(object sender, RoutedEventArgs e)
+        {
+            new TestUsableUserControl_Window().Show();
+        }
         private void btnTemplate_Click(object sender, RoutedEventArgs e)
         {
             new Template_Window().Show();
         }
-
         private void btnDynamicResources_Click(object sender, RoutedEventArgs e)
         {
             new DynamicStyle_Window().Show();

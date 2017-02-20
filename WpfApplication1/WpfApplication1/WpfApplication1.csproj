@@ -57,12 +57,20 @@
     </ApplicationDefinition>
     <Compile Include="Classes\Converters\AgeToBrushConverter.cs" />
     <Compile Include="Classes\Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Classes\Personne.cs" />
     <Compile Include="Classes\Validaters\NumberRangeRule.cs" />
+    <Compile Include="Classes\ViewModels\MainViewModel.cs" />
+    <Compile Include="DataGrid_Window.xaml.cs">
+      <DependentUpon>DataGrid_Window.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DynamicStyle_Window.xaml.cs">
       <DependentUpon>DynamicStyle_Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="Template_Window.xaml.cs">
       <DependentUpon>Template_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TestUsableUserControl_Window.xaml.cs">
+      <DependentUpon>TestUsableUserControl_Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="TestUserControl_Window.xaml.cs">
       <DependentUpon>TestUserControl_Window.xaml</DependentUpon>
@@ -70,6 +78,13 @@
     <Compile Include="UserControls\ucPerson.xaml.cs">
       <DependentUpon>ucPerson.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucUsablePerson.xaml.cs">
+      <DependentUpon>ucUsablePerson.xaml</DependentUpon>
+    </Compile>
+    <Page Include="DataGrid_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DynamicStyle_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -105,11 +120,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TestUsableUserControl_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TestUserControl_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\ucPerson.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ucUsablePerson.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

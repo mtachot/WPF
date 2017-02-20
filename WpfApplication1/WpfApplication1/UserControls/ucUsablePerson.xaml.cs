@@ -7,19 +7,19 @@ namespace WpfApplication1.UserControls
     /// <summary>
     /// Interaction logic for ucPerson.xaml
     /// </summary>
-    public partial class ucPerson : UserControl
+    public partial class ucUsablePerson : UserControl
     {
-        public ucPerson()
+        public ucUsablePerson()
         {
-            //InitializeComponent();
+            InitializeComponent();
 
             // Validation
-            //Validation.AddErrorHandler(this.txtAge, AgeValidationHandler);
+            Validation.AddErrorHandler(this.txtAge, AgeValidationHandler);
         }
 
         #region Page Life Cycle
 
-        private void ucPerson_Loaded(object sender, EventArgs e)
+        private void ucUsablePerson_Loaded(object sender, EventArgs e)
         {
         }
 
