@@ -12,6 +12,7 @@ namespace WpfApplication1.Classes.Converters
             // Si l'âge est inférieur au seuil défini, il sera coloré en rouge, sinon en vert
             SolidColorBrush redBrush = new SolidColorBrush(Color.FromArgb(255, 160, 0, 0));
             SolidColorBrush greenBrush = new SolidColorBrush(Color.FromArgb(255, 0, 120, 0));
+
             int res = 0;
             if (!String.IsNullOrEmpty(value.ToString()) && int.TryParse(value.ToString(), out res) && res < SEUIL_AGE)
                 return redBrush;

@@ -6,8 +6,8 @@
         Title="Client" Height="300" Width="600" ResizeMode="NoResize">
 	<Window.Resources>
 		<DataTemplate x:Key="personneDataTemplate">
-			<Grid d:DesignWidth="120" d:DesignHeight="50">
-				<Grid.ColumnDefinitions>
+            <Grid d:DesignWidth="120" d:DesignHeight="50">
+                <Grid.ColumnDefinitions>
 					<ColumnDefinition Width="*"/>
 					<ColumnDefinition Width="45"/>
 				</Grid.ColumnDefinitions>

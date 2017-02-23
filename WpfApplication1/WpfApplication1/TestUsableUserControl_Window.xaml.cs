@@ -11,10 +11,10 @@ namespace WpfApplication1
     {
         private List<Personne> personnes = new List<Personne>
             {
-                new Personne{Nom="Dalton", Prenom="Joe", Age=12},
-                new Personne{Nom="Dalton", Prenom="Jack", Age=14},
-                new Personne{Nom="Dalton", Prenom="William", Age=16},
-                new Personne{Nom="Dalton", Prenom="Averell", Age=18}
+                new Personne{Nom="Dalton", Prenom="Joe", Age=12, Address=new Address{CodePostal="BP102", Ville="FarWest", Voie=54}},
+                new Personne{Nom="Dalton", Prenom="Jack", Age=14, Address=new Address{CodePostal="BP102", Ville="FarWest", Voie=54}},
+                new Personne{Nom="Dalton", Prenom="William", Age=16, Address=new Address{CodePostal="BP102", Ville="FarWest", Voie=54}},
+                new Personne{Nom="Dalton", Prenom="Averell", Age=18, Address=new Address{CodePostal="BP102", Ville="FarWest", Voie=54}}
             };
 
         public TestUsableUserControl_Window()

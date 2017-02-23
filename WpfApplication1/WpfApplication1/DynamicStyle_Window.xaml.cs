@@ -17,6 +17,10 @@ namespace WpfApplication1
 
         private void DefineEvents()
         {
+            // Page
+            Closed += DynamicStyle_Window_Closed;
+
+            // Components
             btnRed.Click += btnRed_Click;
             btnGreen.Click += btnGreen_Click;
             btnPink.Click += btnPink_Click;
@@ -27,6 +31,8 @@ namespace WpfApplication1
         void DynamicStyle_Window_Closed(object sender, EventArgs e)
         {
             // Unbinding events (prevents memory leaks)
+            Closed -= DynamicStyle_Window_Closed;
+
             btnRed.Click -= btnRed_Click;
             btnGreen.Click -= btnGreen_Click;
             btnPink.Click -= btnPink_Click;

@@ -45,6 +45,9 @@ namespace WpfApplication1
         void MainWindow_Closed(object sender, EventArgs e)
         {
             // Killing remaining events (prevents memory leaks)
+            Loaded -= MainWindow_Loaded;
+            Closed -= MainWindow_Closed;
+
             btnHeaderedControls.Click -= btnHeaderedControls_Click;
             btnClose.Click -= btnClose_Click;
             btnAbonnement.Click -= btnAbonnement_Click;
