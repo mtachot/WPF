@@ -57,6 +57,7 @@ namespace WpfApplication1
             btnTemplate.Click -= btnTemplate_Click;
             btnUsableUserControl.Click -= btnUsableUserControl_Click;
             btnDatagrid.Click -= btnDatagrid_Click;
+            btnObservableCollection.Click -= btnObservableCollection_Click;
         }
 
         #endregion
@@ -79,6 +80,12 @@ namespace WpfApplication1
             btnTemplate.Click += btnTemplate_Click;
             btnUsableUserControl.Click += btnUsableUserControl_Click;
             btnDatagrid.Click += btnDatagrid_Click;
+            btnObservableCollection.Click += btnObservableCollection_Click;
+        }
+
+        private void btnObservableCollection_Click(object sender, RoutedEventArgs e)
+        {
+            new ObservableCollection_Window().Show();
         }
 
         private void btnDatagrid_Click(object sender, RoutedEventArgs e)
