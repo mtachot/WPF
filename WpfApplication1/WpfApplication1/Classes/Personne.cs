@@ -8,51 +8,41 @@ using System.Threading.Tasks;
 
 namespace WpfApplication1.Classes
 {
-    public class Personne : INotifyPropertyChanged
+    public class Personne : BindableBase
     {
         private string prenom;
         public string Prenom
         {
             get { return prenom; }
-            set { prenom = value; OnPropertyChanged(); }
+            set { SetProperty(value, ref prenom); }
         }
 
         private string nom;
         public string Nom
         {
             get { return nom; }
-            set { nom = value; OnPropertyChanged(); }
+            set { SetProperty(value, ref nom); }
         }
 
         private int age;
         public int Age
         {
             get { return age; }
-            set { age = value; OnPropertyChanged(); }
+            set { SetProperty(value, ref age); }
         }
 
         private bool isMarried;
         public bool IsMarried
         {
             get { return isMarried; }
-            set { isMarried = value; OnPropertyChanged(); }
+            set { SetProperty(value, ref isMarried); }
         }
 
         private Address address;
         public Address Address
         {
             get { return address; }
-            set { address = value; OnPropertyChanged(); }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName] string propName = null)
-        {
-            PropertyChangedEventHandler propertyChanged = PropertyChanged;
-            if (propertyChanged != null)
-            {
-                propertyChanged(this, new PropertyChangedEventArgs(propName));
-            }
+            set { SetProperty(value, ref address); }
         }
     }
 }

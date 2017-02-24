@@ -6,27 +6,27 @@ using System.Threading.Tasks;
 
 namespace WpfApplication1.Classes
 {
-    public class Address
+    public class Address : BindableBase
     {
         private int voie;
         public int Voie
         {
             get { return voie; }
-            set { voie = value; }
+            set { SetProperty(value, ref voie); }
         }
 
         private string ville;
         public string Ville
         {
             get { return ville; }
-            set { ville = value; }
+            set { SetProperty(value, ref ville); }
         }
 
         private string codePostal;
         public string CodePostal
         {
             get { return codePostal; }
-            set { codePostal = value; }
+            set { SetProperty(value, ref codePostal); }
         }
     }
 }

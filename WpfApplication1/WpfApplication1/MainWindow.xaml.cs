@@ -58,6 +58,7 @@ namespace WpfApplication1
             btnUsableUserControl.Click -= btnUsableUserControl_Click;
             btnDatagrid.Click -= btnDatagrid_Click;
             btnObservableCollection.Click -= btnObservableCollection_Click;
+            btnViewModel.Click -= btnViewModel_Click;
         }
 
         #endregion
@@ -81,6 +82,12 @@ namespace WpfApplication1
             btnUsableUserControl.Click += btnUsableUserControl_Click;
             btnDatagrid.Click += btnDatagrid_Click;
             btnObservableCollection.Click += btnObservableCollection_Click;
+            btnViewModel.Click += btnViewModel_Click;
+        }
+
+        private void btnViewModel_Click(object sender, RoutedEventArgs e)
+        {
+            new ViewModel_Window().Show();
         }
 
         private void btnObservableCollection_Click(object sender, RoutedEventArgs e)

@@ -56,6 +56,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\Address.cs" />
+    <Compile Include="Classes\BindableBase.cs" />
     <Compile Include="Classes\Converters\AgeToBrushConverter.cs" />
     <Compile Include="Classes\Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Classes\Personne.cs" />
@@ -84,6 +85,9 @@
     </Compile>
     <Compile Include="UserControls\ucUsablePerson.xaml.cs">
       <DependentUpon>ucUsablePerson.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel_Window.xaml.cs">
+      <DependentUpon>ViewModel_Window.xaml</DependentUpon>
     </Compile>
     <Page Include="DataGrid_Window.xaml">
       <SubType>Designer</SubType>
@@ -141,6 +145,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\ucUsablePerson.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewModel_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

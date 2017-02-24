@@ -14,27 +14,27 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApplication1.Classes;
+using WpfApplication1.Classes.ViewModels;
 
 namespace WpfApplication1
 {
     /// <summary>
     /// Interaction logic for ObservableCollection_Window.xaml
     /// </summary>
-    public partial class ObservableCollection_Window : Window
+    public partial class ViewModel_Window : Window
     {
-        private ObservableCollection<Personne> displayedItems = new ObservableCollection<Personne>();
-        public ObservableCollection<Personne> DisplayedItems
-        {
-            get { return displayedItems; }
-            set { displayedItems = value; }
-        }
+        private MainViewModel viewModel = new MainViewModel();
 
-        public ObservableCollection_Window()
+        public ViewModel_Window()
         {
             InitializeComponent();
+
             // Events
             DefineEvents();
-            listPersonnes.ItemsSource = displayedItems;
+
+            // VM
+            DataContext = viewModel;
+            listPersonnes.ItemsSource = viewModel.DisplayedItems;
         }
 
         private void DefineEvents()
@@ -57,11 +57,11 @@ namespace WpfApplication1
         private void btnDelPerson_Click(object sender, RoutedEventArgs e)
         {
             var personne = listPersonnes.DataContext;
-            displayedItems.Remove((Personne)personne);
+            viewModel.DisplayedItems.Remove((Personne)personne);
         }
         private void btnAddPerson_Click(object sender, RoutedEventArgs e)
         {
-            displayedItems.Add(new Personne { Prenom = txtPrenom.Text, Nom = txtNom.Text });
+            viewModel.DisplayedItems.Add(new Personne { Prenom = txtPrenom.Text, Nom = txtNom.Text });
         }
     }
 }
