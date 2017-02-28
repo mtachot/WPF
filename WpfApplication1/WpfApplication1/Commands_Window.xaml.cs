@@ -21,11 +21,11 @@ namespace WpfApplication1
     /// <summary>
     /// Interaction logic for ObservableCollection_Window.xaml
     /// </summary>
-    public partial class ViewModel_Window : Window
+    public partial class Commands_Window : Window
     {
-        private MainViewModel viewModel = new MainViewModel();
+        private ViewModel_Commands viewModel = new ViewModel_Commands();
 
-        public ViewModel_Window()
+        public Commands_Window()
         {
             InitializeComponent();
 
@@ -42,16 +42,16 @@ namespace WpfApplication1
             btnAddPerson.Click += btnAddPerson_Click;
             btnDelPerson.Click += btnDelPerson_Click;
 
-            Closed += ViewModel_Window_Closed;
+            Closed += Commands_Window_Closed;
         }
 
-        private void ViewModel_Window_Closed(object sender, EventArgs e)
+        private void Commands_Window_Closed(object sender, EventArgs e)
         {
             // Unbinding events (prevents memory leaks)
             btnAddPerson.Click -= btnAddPerson_Click;
             btnDelPerson.Click -= btnDelPerson_Click;
 
-            Closed -= ViewModel_Window_Closed;
+            Closed -= Commands_Window_Closed;
         }
 
         private void btnDelPerson_Click(object sender, RoutedEventArgs e)

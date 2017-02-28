@@ -57,11 +57,16 @@
     </ApplicationDefinition>
     <Compile Include="Classes\Address.cs" />
     <Compile Include="Classes\BindableBase.cs" />
+    <Compile Include="Classes\Commands\RelayCommand.cs" />
     <Compile Include="Classes\Converters\AgeToBrushConverter.cs" />
     <Compile Include="Classes\Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Classes\Personne.cs" />
     <Compile Include="Classes\Validaters\NumberRangeRule.cs" />
     <Compile Include="Classes\ViewModels\MainViewModel.cs" />
+    <Compile Include="Classes\ViewModels\ViewModel_Commands.cs" />
+    <Compile Include="Commands_Window.xaml.cs">
+      <DependentUpon>Commands_Window.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataGrid_Window.xaml.cs">
       <DependentUpon>DataGrid_Window.xaml</DependentUpon>
     </Compile>
@@ -89,6 +94,10 @@
     <Compile Include="ViewModel_Window.xaml.cs">
       <DependentUpon>ViewModel_Window.xaml</DependentUpon>
     </Compile>
+    <Page Include="Commands_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DataGrid_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -184,6 +193,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Pics\refresh.png" />
     <Content Include="Pics\pic_001.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

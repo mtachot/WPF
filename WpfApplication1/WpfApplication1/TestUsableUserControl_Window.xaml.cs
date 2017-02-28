@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
 using WpfApplication1.Classes;
+using WpfApplication1.Classes.ViewModels;
 
 namespace WpfApplication1
 {
@@ -9,18 +10,20 @@ namespace WpfApplication1
     /// </summary>
     public partial class TestUsableUserControl_Window : Window
     {
-        private List<Personne> personnes = new List<Personne>
-            {
-                new Personne{Nom="Dalton", Prenom="Joe", Age=12, Address=new Address{CodePostal="BP102", Ville="FarWest", Voie=54}},
-                new Personne{Nom="Dalton", Prenom="Jack", Age=14, Address=new Address{CodePostal="BP102", Ville="FarWest", Voie=54}},
-                new Personne{Nom="Dalton", Prenom="William", Age=16, Address=new Address{CodePostal="BP102", Ville="FarWest", Voie=54}},
-                new Personne{Nom="Dalton", Prenom="Averell", Age=18, Address=new Address{CodePostal="BP102", Ville="FarWest", Voie=54}}
-            };
-
+        private ViewModel_Commands viewModel = new ViewModel_Commands();
         public TestUsableUserControl_Window()
         {
             InitializeComponent();
-            this.listboxPersonnes.ItemsSource = personnes;
+
+
+            // VM
+            viewModel.DisplayedItems.Add(new Personne { Nom = "Dalton", Prenom = "Joe", Age = 12, Address = new Address { CodePostal = "BP102", Ville = "FarWest", Voie = 54 } });
+            viewModel.DisplayedItems.Add(new Personne { Nom = "Dalton", Prenom = "Jack", Age = 14, Address = new Address { CodePostal = "BP102", Ville = "FarWest", Voie = 54 } });
+            viewModel.DisplayedItems.Add(new Personne { Nom = "Dalton", Prenom = "William", Age = 16, Address = new Address { CodePostal = "BP102", Ville = "FarWest", Voie = 54 } });
+            viewModel.DisplayedItems.Add(new Personne { Nom = "Dalton", Prenom = "Averell", Age = 18, Address = new Address { CodePostal = "BP102", Ville = "FarWest", Voie = 54 } });
+
+            DataContext = viewModel;
+            listboxPersonnes.ItemsSource = viewModel.DisplayedItems;
         }
     }
 }
