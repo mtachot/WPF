@@ -60,6 +60,7 @@ namespace WpfApplication1
             btnObservableCollection.Click -= btnObservableCollection_Click;
             btnViewModel.Click -= btnViewModel_Click;
             btnCommands.Click -= btnCommands_Click;
+            btnValidators.Click -= btnValidators_Click;
         }
 
         #endregion
@@ -85,6 +86,7 @@ namespace WpfApplication1
             btnObservableCollection.Click += btnObservableCollection_Click;
             btnViewModel.Click += btnViewModel_Click;
             btnCommands.Click += btnCommands_Click;
+            btnValidators.Click += btnValidators_Click;
         }
 
         private void btnCommands_Click(object sender, EventArgs e)
@@ -134,6 +136,10 @@ namespace WpfApplication1
         private void btnPanel_Click(object sender, RoutedEventArgs e)
         {
             new Panels_Window().Show();
+        }
+        private void btnValidators_Click(object sender, RoutedEventArgs e)
+        {
+            new Validators_Window().Show();
         }
 
         #endregion

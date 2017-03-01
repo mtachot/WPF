@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApplication1.Validators_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:validaters="clr-namespace:WpfApplication1.Classes.Validaters"
+        Title="Validators_Window" Height="200" Width="450">
+    <Grid>
+        <TextBox Width="200" Height="20">
+            <TextBox.Text>
+                <Binding Path="Age" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <validaters:NumberRangeRule Max="100" Min="10"  ValidationStep="RawProposedValue"/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+            <Validation.ErrorTemplate>
+                <ControlTemplate>
+                    <StackPanel>
+                        <AdornedElementPlaceholder x:Name="textBox"/>
+                        <TextBlock Text="{Binding [0].ErrorContent}" Foreground="Red"/>
+                    </StackPanel>
+                </ControlTemplate>
+            </Validation.ErrorTemplate>
+        </TextBox>
+    </Grid>
+</Window>

@@ -64,6 +64,7 @@
     <Compile Include="Classes\Validaters\NumberRangeRule.cs" />
     <Compile Include="Classes\ViewModels\MainViewModel.cs" />
     <Compile Include="Classes\ViewModels\ViewModel_Commands.cs" />
+    <Compile Include="Classes\ViewModels\ViewModel_Validators.cs" />
     <Compile Include="Commands_Window.xaml.cs">
       <DependentUpon>Commands_Window.xaml</DependentUpon>
     </Compile>
@@ -90,6 +91,9 @@
     </Compile>
     <Compile Include="UserControls\ucUsablePerson.xaml.cs">
       <DependentUpon>ucUsablePerson.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Validators_Window.xaml.cs">
+      <DependentUpon>Validators_Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel_Window.xaml.cs">
       <DependentUpon>ViewModel_Window.xaml</DependentUpon>
@@ -154,6 +158,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\ucUsablePerson.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Validators_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

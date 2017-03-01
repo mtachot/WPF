@@ -80,5 +80,6 @@
         <Button x:Name="btnObservableCollection" Height="20" Width="80" Margin="10,40,580,599" Content="Obs. Collection" FontSize="11" />
         <Button x:Name="btnViewModel" Height="20" Width="80" Margin="10,60,580,569" Content="ViewModel" FontSize="11" />
         <Button x:Name="btnCommands" Height="20" Width="80" Margin="10, 80, 580,539" Content="Commands" />
+        <Button x:Name="btnValidators" Height="20" Width="80" Margin="10, 100, 580, 509" Content="Validators" />
     </Grid>
 </Window>
